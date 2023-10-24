@@ -153,6 +153,7 @@ def jobdictbase():
 def waitpoint():
 
     wait_point = 1
+    
     return wait_point
 
 
@@ -243,10 +244,10 @@ def jobdetailedscraper(links, Job_Overall_Details, wait_point):  # giving links 
     return Job_Overall_Details #returns scraped jobs dictionary
 
 
-driver = linkedin_login(email, password)
-JobPageDriverCount = fill_job_location(driver, position, location)
-links = collect_links(JobPageDriverCount[0], JobPageDriverCount[1])
+# driver = linkedin_login(email, password)
+# JobPageDriverCount = fill_job_location(driver, position, location)
+# links = collect_links(JobPageDriverCount[0], JobPageDriverCount[1])
 
-JobScrapperReturn = jobdetailedscraper(links, jobdictbase(), waitpoint())
-df = pd.DataFrame(JobScrapperReturn)
-print(df.head())
+# JobScrapperReturn = jobdetailedscraper(links, jobdictbase(), waitpoint())
+# df = pd.DataFrame(JobScrapperReturn)
+# print(df.head())
